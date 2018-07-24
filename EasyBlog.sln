@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyBlog", "EasyBlog\EasyBlog.csproj", "{5DDFB256-481E-42F4-94C9-4F25C1853C55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyBlog", "EasyBlog\EasyBlog.csproj", "{5DDFB256-481E-42F4-94C9-4F25C1853C55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyBlog.IServices", "EasyBlog.IServices\EasyBlog.IServices.csproj", "{0E6CD606-8950-4B2C-8014-852891BEAAE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyBlog.IServices", "EasyBlog.IServices\EasyBlog.IServices.csproj", "{0E6CD606-8950-4B2C-8014-852891BEAAE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyBlog.Domain", "EasyBlog.Domain\EasyBlog.Domain.csproj", "{A2AD34BF-D3E3-45A9-8F43-69D402EACF3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easyblog.Dto", "Easyblog.Dto\Easyblog.Dto.csproj", "{B3783985-ED7B-4168-BFBE-03B0D727F56B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{0E6CD606-8950-4B2C-8014-852891BEAAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E6CD606-8950-4B2C-8014-852891BEAAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E6CD606-8950-4B2C-8014-852891BEAAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2AD34BF-D3E3-45A9-8F43-69D402EACF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2AD34BF-D3E3-45A9-8F43-69D402EACF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2AD34BF-D3E3-45A9-8F43-69D402EACF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2AD34BF-D3E3-45A9-8F43-69D402EACF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3783985-ED7B-4168-BFBE-03B0D727F56B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3783985-ED7B-4168-BFBE-03B0D727F56B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3783985-ED7B-4168-BFBE-03B0D727F56B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3783985-ED7B-4168-BFBE-03B0D727F56B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

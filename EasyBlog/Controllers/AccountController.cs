@@ -8,17 +8,31 @@ using Microsoft.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+using Easyblog.Dto;
+using EasyBlog.IServices;
 
 namespace EasyBlog.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly IAccountServices _accountService;
+        public AccountController(IAccountServices accountServices)
+        {
+            _accountService = accountServices;
+        }
         public IActionResult Index()
         {
             return View();
         }
 
-        public async Task<IActionResult> Login()
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginDto loginDto,string returnUrl)
         {
             ClaimsIdentity identity = new ClaimsIdentity("easyBlog");
             identity.AddClaim(new Claim(ClaimTypes.Sid, "00001"));
@@ -33,6 +47,19 @@ namespace EasyBlog.Controllers
         {
             await HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public IActionResult Signup()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Signup(UsersDto user)
+        {
+            _accountService.Signup(user.Name, user.Password);
+            return RedirectToAction(nameof(Index), "Host");
         }
     }
 }
