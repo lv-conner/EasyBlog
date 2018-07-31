@@ -1,5 +1,6 @@
 ﻿using EasyBlog.IServices;
 using EasyBlog.IServices.DefaultServices;
+using EasyBlog.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;

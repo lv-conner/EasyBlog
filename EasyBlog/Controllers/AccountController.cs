@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using Easyblog.Dto;
-using EasyBlog.IServices;
+using EasyBlog.Services;
 
 namespace EasyBlog.Controllers
 {
@@ -39,7 +39,10 @@ namespace EasyBlog.Controllers
             identity.AddClaim(new Claim(ClaimTypes.Name, "tim lv"));
             identity.AddClaim(new Claim(ClaimTypes.Role, "author"));
             ClaimsPrincipal user = new ClaimsPrincipal(identity);
-            await HttpContext.SignInAsync(user);
+            AuthenticationProperties properties = new AuthenticationProperties();
+            properties.IsPersistent = loginDto.RememberMe;
+            properties.ExpiresUtc = new DateTimeOffset(DateTime.Now, TimeSpan.FromMinutes(20));
+            await HttpContext.SignInAsync(user,properties);
             return RedirectToAction("Index", "Home");
         }
 

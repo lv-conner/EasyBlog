@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EasyBlog.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -35,6 +36,8 @@ namespace EasyBlog
                     op.LoginPath = "/Account/Login";
                     op.LogoutPath = "/Account/Logout";
                 });
+            services.AddMemoryAccountServices();
+            services.AddSignalR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -53,7 +56,10 @@ namespace EasyBlog
             app.UseStaticFiles();
             app.UseAuthentication();
             //app.UseCookiePolicy();
-
+            app.UseSignalR(config =>
+            {
+                config.MapHub<ChatHub>("/Chat");
+            });
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

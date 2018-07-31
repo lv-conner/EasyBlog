@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EasyBlog.IServices
+namespace EasyBlog.Services
 {
     public interface IAuthorizedService
     {

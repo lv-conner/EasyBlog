@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyBlog", "EasyBlog\EasyBlog.csproj", "{5DDFB256-481E-42F4-94C9-4F25C1853C55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyBlog.IServices", "EasyBlog.IServices\EasyBlog.IServices.csproj", "{0E6CD606-8950-4B2C-8014-852891BEAAE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyBlog.Services", "EasyBlog.IServices\EasyBlog.Services.csproj", "{0E6CD606-8950-4B2C-8014-852891BEAAE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyBlog.Domain", "EasyBlog.Domain\EasyBlog.Domain.csproj", "{A2AD34BF-D3E3-45A9-8F43-69D402EACF3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyBlog.Domain", "EasyBlog.Domain\EasyBlog.Domain.csproj", "{A2AD34BF-D3E3-45A9-8F43-69D402EACF3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easyblog.Dto", "Easyblog.Dto\Easyblog.Dto.csproj", "{B3783985-ED7B-4168-BFBE-03B0D727F56B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Easyblog.Dto", "Easyblog.Dto\Easyblog.Dto.csproj", "{B3783985-ED7B-4168-BFBE-03B0D727F56B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EasyBlog.IServices
+namespace EasyBlog.Services
 {
     public interface IUserValidator
     {
